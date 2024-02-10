@@ -1,12 +1,14 @@
-import React from 'react'
 import Icons from '../SocialIcons/Icons'
+import './Banner.css';
 
 const Banner = () => {
   return (
-    <div class="hero-section bg-red-300 w-full">
-        <div class="text-center mx-auto container flex flex-col justify-center h-full bg-green-300">
-            <h1>Hola, mi nombre es <br />Héctor Valdés M</h1>
-            <h2 class="border-y-2 mt-5">Frontend Developer</h2>
+    <div className="hero-section w-full">
+        <div className="overlay w-full h-full text-center mx-auto flex flex-col justify-around py-44 ">
+            <h1 className="oswald font-bold text-5xl text-white">Hola, mi nombre es <br />Héctor Valdés M</h1>
+            <div className='w-1/2 mx-auto'>
+              <h2 className="font-sans border-y-2 py-2 text-white">Frontend Developer</h2>
+            </div>
             <Icons />
         </div>        
     </div>

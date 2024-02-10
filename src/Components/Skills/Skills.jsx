@@ -1,4 +1,3 @@
-import React from 'react';
 import compromisoLottie from '../../assets/Lottie/handshake-deal.json';
 import adaptabilidadLottie from '../../assets/Lottie/people-exchange-arrows.json';
 import aprendizajeLottie from '../../assets/Lottie/learn-more-text.json';
@@ -18,7 +17,7 @@ const Skills = () => {
   return (
     <div class="px-8">
         <h2 class="border-b-4 border-dfac py-4 text-center">HABILIDADES</h2>
-        <p class="text-center">{{desc}}</p>
+        <p class="text-center"></p>
         
         <hr/>
     </div>
