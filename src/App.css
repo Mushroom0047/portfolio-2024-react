@@ -6,4 +6,8 @@
 }
 .oswald{
     font-family: 'Oswald', sans-serif;
+    letter-spacing: 1.5px;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
 }
