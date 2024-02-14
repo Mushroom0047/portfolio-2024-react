@@ -41,7 +41,7 @@ const Knowledge = () => {
     { src: gms, alt: 'Game Maker Studio 2' },
   ];
   const varTitle = 'Conocimientos';
-  const varSubtitle = 'Lorem ipsum dolor sit amet consectetur adipiscing elit, etiam in aptent nascetur maecenas mauris, cum cursus varius enim interdum habitasse. Iaculis morbi gravida id';
+  const varSubtitle = 'Soy un Frontend Developer apasionado con experiencia en la creación de interfaces intuitivas y atractivas. Transformo conceptos en código, construyendo sitios dinámicos y visualmente impactantes. Desde diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar estética con eficiencia. ¡Hagamos que su presencia en línea sea memorable y efectiva!';
   return (
     <div className="w-full px-5 py-8 bg-cs-grey">
       <div className='w-full'>

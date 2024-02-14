@@ -7,19 +7,19 @@ const Experience = () => {
       empresa: 'Grupo Qs',
       cargo: 'Web Developer',
       periodo: '2022 - Actual',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit semper dignissim, metus',
+      desc: 'Como Web Developer en Grupo QS, lideré el diseño y desarrollo web centrado en la experiencia del usuario. Me especialicé en la maquetación y mantenimiento de páginas en WordPress, la creación de tiendas online con WooCommerce, y el desarrollo de funcionalidades personalizadas. También contribuí a la optimización SEO on-page de los sitios web.',
     },
     {
       empresa: 'DesignSEO Group',
       cargo: 'Programador web',
       periodo: '2021 - 2022',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit semper dignissim, metus',
+      desc: 'Durante mi práctica profesional en DesignSEO, me enfoqué en la maquetación de páginas en WordPress utilizando Elementor y Divi. Contribuí al desarrollo de experiencias web atractivas y funcionales, optimizando la presencia en línea de la empresa.',
     },
     {
       empresa: 'Freelancer',
       cargo: 'Desarrollador web',
       periodo: '2022 - Actual',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit semper dignissim, metus',
+      desc: 'Me dedico a desarrollar sitios web y tiendas para emprendedores como freelancer, utilizando tecnologías como WordPress y Shopify. Además de diseño y desarrollo, ofrezco servicios integrales que incluyen mantenimiento, optimización, capacitaciones y consultorías para garantizar un rendimiento óptimo y una presencia efectiva en línea.',
     },
   ]
   const varTitle = 'EXPERIENCIA';
@@ -33,9 +33,8 @@ const Experience = () => {
       </div>
       <div className='px-5'>
         {
-          data.map((data, index) => (
-            <>
-            <div key={index} className='flex flex-row flex-wrap py-8'>
+          data.map((data, index) => (            
+            <div key={index} className='flex flex-row flex-wrap py-8 border-b-2'>
               <div className='w-1/2'>
                 <h3 className='font-bold oswald text-lg'>{data.empresa}</h3>
                 <h4>{data.periodo}</h4>
@@ -47,8 +46,6 @@ const Experience = () => {
                 <p>{data.desc}</p>
               </div>              
             </div>
-            <hr />
-            </>
           ))
         }
       </div>

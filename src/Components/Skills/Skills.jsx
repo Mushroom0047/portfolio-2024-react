@@ -16,7 +16,7 @@ const Skills = () => {
         { name: 'Trabajo en Equipos', src: equipoLottie },
         { name: 'Organización', src: organizacionLottie },
     ];
-    const skills = 'Soy Analista programador egresado de Inacap con experiencia en desarrollo web. Me especializo en JavaScript, HTML, CSS y en el frameworks React. También tengo experiencia en tecnologías de base de datos como MySQL, así como en herramientas de desarrollo como Git y GitHub.';
+    const skills = 'Mi enfoque organizado se refleja en la gestión eficiente de tareas y proyectos, garantizando plazos cumplidos. La comunicación clara y efectiva facilita la colaboración con equipos multidisciplinarios. Mi habilidad para adaptarme a entornos dinámicos y aprender rápidamente me permite enfrentar desafíos con resiliencia. Con equilibrio entre habilidades técnicas y blandas, estoy comprometido a llevar cada proyecto al siguiente nivel de éxito y eficiencia.';
      
   return (
     <div className="px-8 text-center bg-cs-grey py-12">

@@ -1,5 +1,6 @@
 import Title from '../General/Title';
 import SubTitle from '../General/SubTitle';
+import Signature from '../../assets/firma.webp';
 
 const About = () => {
     const {nombre, email, fechaNacimiento, direccion, nacionalidad} = {
@@ -48,9 +49,14 @@ const About = () => {
                     <a href={linkCv}>DESCARGAR CURRICULUM EN PDF</a>
                 </button>
             </div>
-        </div>
-        <div className="w-full ">
-            <img src="https://via.placeholder.com/800x600"/>
+            <div className='signature flex flex-row justify-center'>
+                <img 
+                    src={Signature} 
+                    alt="signature-hector-valdes-dev" 
+                    width={200}
+                    height={200}
+                    />
+            </div>
         </div>
     </div>
   )

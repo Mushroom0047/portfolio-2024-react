@@ -6,7 +6,13 @@ const Education = () => {
       institucion: 'INACAP',
       titulo: 'Analista Programador',
       periodo: '2018 - 2020',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit semper dignissim, metus',
+      desc: 'Durante mi formación como Analista Programador en Inacap, aprendí un amplio vocabulario y obtuve comprensión de los términos fundamentales en el mundo de la programación. Aprendí el diseño de algoritmos, desarrollo de aplicaciones y bases de datos, lo que me ha dotado de habilidades esenciales para enfrentar desafíos en el campo de la tecnología de la información.',
+    },
+    {
+      institucion: 'UDEMY',
+      titulo: 'Desarrollo web HTML, CSS y JS',
+      periodo: '2021',
+      desc: 'Adquirí conocimientos autodidactas en desarrollo web a través de Udemy, donde aprendí HTML, CSS y JavaScript. Estos cursos me proporcionaron una sólida comprensión de las tecnologías fundamentales para la creación de sitios web interactivos y atractivos.',
     },
   ]
   const varTitle = 'EDUCACIÓN';

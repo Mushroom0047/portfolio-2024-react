@@ -9,7 +9,7 @@ const Banner = () => {
             <div className='w-1/2 mx-auto'>
               <h2 className="font-sans border-y-2 py-2 text-white inline-block">Frontend Developer</h2>
             </div>
-            <Icons />
+            <Icons color='ffffff'/>
         </div>        
     </div>
   )
