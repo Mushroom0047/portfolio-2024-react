@@ -24,9 +24,9 @@ const Experience = () => {
   ]
   const varTitle = 'EXPERIENCIA';
   const varSubtitle = '3 años de experiencia';
-  const varText = 'Lorem ipsum dolor sit amet consectetur adipiscing elit, etiam in aptent nascetur maecenas mauris, cum cursusarius enim interdum habitasse. Iaculis morbi gravida id';
+  const varText = 'Con más de tres años de experiencia como Frontend Developer, transformo conceptos creativos en interfaces atractivas y eficientes. Desde la implementación de diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar la estética con la funcionalidad. Construyo sitios web dinámicos y visualmente impactantes, haciendo que su presencia en línea sea memorable y efectiva.';
   return (
-    <div className="w-full text-left py-8">
+    <div className="w-full text-left py-8 md:px-16 lg:px-96">
       <div className="px-5">
         <Title title={varTitle} />
         <SubTitle title={varSubtitle} subtitle={varText} />

@@ -1,6 +1,7 @@
 import Title from '../General/Title';
 import SubTitle from '../General/SubTitle';
 import Signature from '../../assets/firma.webp';
+import cv from '../../assets/Hector Valdes M cv v02-2024.pdf';
 
 const About = () => {
     const {nombre, email, fechaNacimiento, direccion, nacionalidad} = {
@@ -11,10 +12,10 @@ const About = () => {
             nacionalidad: 'Chilena',
         }
     const perfil = 'Estoy comprometido a crear productos digitales de calidad que sean fáciles de usar y ofrezcan la mejor experiencia para los usuarios. Siempre estoy aprendiendo nuevas tecnologías y me aseguro de estar al tanto de los últimos avances en el desarrollo web.';
-    const linkCv = '#';
+    const linkCv = cv;
     
   return (
-    <div className="h-full flex flex-col py-8">
+    <div className="h-full flex flex-col py-8 md:w-1/2 lg:px-32">
         <div className="w-full flex flex-col justify-center">            
             <div className="px-5">
                 <Title title='SOBRE MÍ'/>
@@ -46,7 +47,9 @@ const About = () => {
             <SubTitle title='Perfil profesional' subtitle={perfil}/>
             <div className="flex justify-center py-8">
                 <button className="text-center p-4 border-solid border-border-dfac border-4 bg-white hover:bg-border-dfac transition-colors hover:transition-colors font-bold oswald hover:text-white">
-                    <a href={linkCv}>DESCARGAR CURRICULUM EN PDF</a>
+                    <a href={linkCv} target='blank'>
+                        DESCARGAR CURRICULUM EN PDF
+                    </a>
                 </button>
             </div>
             <div className='signature flex flex-row justify-center'>

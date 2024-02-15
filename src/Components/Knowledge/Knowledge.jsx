@@ -43,14 +43,14 @@ const Knowledge = () => {
   const varTitle = 'Conocimientos';
   const varSubtitle = 'Soy un Frontend Developer apasionado con experiencia en la creación de interfaces intuitivas y atractivas. Transformo conceptos en código, construyendo sitios dinámicos y visualmente impactantes. Desde diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar estética con eficiencia. ¡Hagamos que su presencia en línea sea memorable y efectiva!';
   return (
-    <div className="w-full px-5 py-8 bg-cs-grey">
+    <div className="w-full px-5 py-8 bg-cs-grey md:px-16 lg:px-96 lg:py-24">
       <div className='w-full'>
         <SubTitle title={varTitle} subtitle={varSubtitle}/>
       </div>
       <div className="w-full flex flex-row flex-wrap justify-cente">
         {
           icons.map((icon, index) => (
-            <div key={index} className='w-1/3 flex justify-center'>
+            <div key={index} className='w-1/3 flex justify-center md:w-1/6'>
               <img                
                 className='img-icon p-2 cursor-pointer'
                 width='80px'

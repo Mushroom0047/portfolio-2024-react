@@ -17,13 +17,12 @@ const Education = () => {
   ]
   const varTitle = 'EDUCACIÓN';
   return (
-    <div className="w-full text-left py-8 bg-cs-grey">
+    <div className="w-full text-left py-8 bg-cs-grey md:px-16 lg:px-96">
       <Title title={varTitle}/>
       <div className='px-5'>
         {
           informarion.map((data, index) => (
-            <>
-            <div key={index} className='flex flex-row flex-wrap py-8'>
+            <div key={index} className='flex flex-row flex-wrap py-8 border-b-2'>
               <div className='w-1/2'>
                 <h3 className='font-bold oswald text-lg'>{data.institucion}</h3>
                 <h4>{data.periodo}</h4>
@@ -34,9 +33,7 @@ const Education = () => {
               <div className='w-full py-8'>
                 <p>{data.desc}</p>
               </div>              
-            </div>
-            <hr />
-            </>
+            </div>                      
           ))
         }
       </div>

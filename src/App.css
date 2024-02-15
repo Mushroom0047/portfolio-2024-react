@@ -11,3 +11,9 @@
 .roboto{
     font-family: 'Roboto', sans-serif;
 }
+
+/*iframe*/
+.iframe{
+    border: 0;
+    filter: grayscale(100%);
+}

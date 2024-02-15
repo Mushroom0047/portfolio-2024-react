@@ -1,24 +1,25 @@
 import PropTypes from 'prop-types';
 
-const Icons = ({color}) => {
+const Icons = ({color, size, filled}) => {
+  const fill = (filled) ? '/ios-filled/' : '/';
   const iconsList = [
     {
-      src: `https://img.icons8.com/${color}/48/github.png`,
+      src: `https://img.icons8.com${fill}${color}/48/github.png`,
       alt: 'Github icon',
       url: 'https://github.com/Mushroom0047'
     },
     {
-      src: `https://img.icons8.com/${color}/48/linkedin.png`,
+      src: `https://img.icons8.com${fill}${color}/48/linkedin.png`,
       alt: 'Linkedin icon',
       url: 'https://www.linkedin.com/in/hector-valdes-m/'
     },
     {
-      src: `https://img.icons8.com/${color}/48/instagram-new--v1.png`,
+      src: `https://img.icons8.com${fill}${color}/48/instagram-new--v1.png`,
       alt: 'Instagram icon',
       url: 'https://www.instagram.com/mushroom.dev/?hl=es-la'
     },
     {
-      src: `https://img.icons8.com/${color}/48/steam.png`,
+      src: `https://img.icons8.com${fill}${color}/48/steam.png`,
       alt: 'Steam icon',
       url: 'https://steamcommunity.com/id/mushroom0047/'
     },
@@ -31,7 +32,9 @@ const Icons = ({color}) => {
         <img 
         className="img-icon"
         src={icon.src} 
-        alt={icon.alt} />
+        alt={icon.alt} 
+        width={size}
+        height={size}/>
       </a>
       ))}
       </div>
@@ -39,6 +42,8 @@ const Icons = ({color}) => {
 }
 Icons.propTypes = {
   color: PropTypes.string.isRequired,
+  size: PropTypes.string,
+  filled: PropTypes.bool,
 }
 
 export default Icons
