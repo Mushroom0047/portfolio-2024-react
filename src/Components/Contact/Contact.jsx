@@ -6,14 +6,14 @@ const Contact = () => {
   const varTitle = 'CONTACTO';
   const vatSubtitle = 'Si buscas un desarrollo web que destaque y cumpla con tus necesidades, ¡estás en el lugar correcto! Estoy aquí para escucharte y trabajar contigo en cada paso del proceso.';
   return (
-    <div className="py-8 bg-cs-grey md:px-16 lg:px-96">
+    <div className="py-8 bg-cs-grey md:px-16 lg:px-24 xl:px-96">
       <div className="w-full">
         <Title title={varTitle} />
         <p className='text-center pb-4 md:text-left'>{vatSubtitle}</p>
       </div>
       <div className='w-full flex flex-col md:flex-row'>
         <div className='w-full flex flex-row justify-center md:flex-col md:gap-12 md:w-1/3 '>
-          <div className='w-1/3 flex flex-col items-center gap-2 md:flex-row '>
+          <div className='w-full flex flex-col items-center gap-2 md:flex-row '>
             <img
               width="50"
               height="50"
@@ -45,7 +45,7 @@ const Contact = () => {
               </h4>
             </div>
           </div>
-          <div className='w-1/3 flex flex-col items-center gap-2 md:flex-row '>
+          <div className='w-full flex flex-col items-center gap-2 md:flex-row '>
             <img
               width="50"
               height="50"

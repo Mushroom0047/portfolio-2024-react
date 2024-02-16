@@ -1,7 +1,7 @@
 import { Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react';
 import Title from '../General/Title';
 import PortfolioCarousel from './PortfolioCarousel.jsx';
-import { WordPressProjects, gamesProjects, codeProjects } from './Proyectos.js';
+import { WordPressProjects, gamesProjects, codeProjects, reactProjects, Extensiones } from './Proyectos.js';
 import PortfolioCard from './PortfolioCard.jsx';
 
 
@@ -15,26 +15,37 @@ const Portfolio = () => {
       label: "WordPress",
       value: "wordpress",
       content: WordPressProjects,
+    },    
+    {
+      label: "Códigos web",
+      value: "codigos",
+      content: codeProjects,
+    },
+    {
+      label: "Extensiones",
+      value: "extensiones",
+      content: Extensiones,
+    },
+    {
+      label: "React",
+      value: "react",
+      content: reactProjects,
     },
     {
       label: "Videojuegos",
       value: "videojuegos",  
       content: gamesProjects,
     },
-    {
-      label: "Códigos",
-      value: "codigos",
-      content: codeProjects,
-    },
   ];
 
   return (
-    <div className="py-8 md:px-16 lg:px-48">
-      <div className="text-center px-2 lg:px-96">
+    <div className="py-8 md:px-16 lg:px-16 xl:px-48">
+      <div className="text-center px-2">
         <Title title={varTitle} />
         <p className='md:text-left'>{varSubtitle}</p>
       </div>
       <div className='md:hidden'>
+        {/* PORTAFOLIO DESKTOP */}
         <div className='w-full flex flex-col justify-center py-4 md:flex-row'>
           <div className='w-full flex flex-col md:w-1/3 md:justify-center'>
             <h3 className="oswald font-medium text-xl px-4 py-4">WordPress</h3>
@@ -60,9 +71,9 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      {/* PORTAFOLIO RESPONSIVE */}
-      <div className='sm:hidden md:block py-16'>
-      <Tabs value="html" orientation="vertical">
+      {/* PORTAFOLIO DESKTOP */}
+      <div className='sm:hidden md:flex py-16'>
+      <Tabs value="wordpress" orientation="vertical">
       <TabsHeader className="w-32 gap-4">
         {data.map(({ label, value }) => (
           <Tab key={value} value={value}>

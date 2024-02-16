@@ -43,7 +43,7 @@ const Knowledge = () => {
   const varTitle = 'Conocimientos';
   const varSubtitle = 'Soy un Frontend Developer apasionado con experiencia en la creación de interfaces intuitivas y atractivas. Transformo conceptos en código, construyendo sitios dinámicos y visualmente impactantes. Desde diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar estética con eficiencia. ¡Hagamos que su presencia en línea sea memorable y efectiva!';
   return (
-    <div className="w-full px-5 py-8 bg-cs-grey md:px-16 lg:px-96 lg:py-24">
+    <div className="w-full px-5 py-8 bg-cs-grey md:px-16 lg:px-32 lg:py-16 xl:px-96 xl:py-24">
       <div className='w-full'>
         <SubTitle title={varTitle} subtitle={varSubtitle}/>
       </div>

@@ -10,11 +10,40 @@ const iconsUrl = [
     /*7*/{name: 'PHP', url:'src/assets/svgIcons/icons8-php.svg'},
     /*8*/{name: 'Game Maker Studio 2', url:'src/assets/svgIcons/icons8-gms.svg'},
     /*9*/{name: 'Python', url:'src/assets/svgIcons/icons8-python.svg'},
+    /*10*/{name: 'HTML', url:'src/assets/svgIcons/icons8-html.svg'},
 ]
 
 export const reactProjects = [
     {
-        
+        title: "Buscador de gifs",
+        desc: 'Pequeño proyecto en React, se obtienen gif tomando el valor del input y buscandolos mediante la API de GIPHY.',
+        urlImg: urlImg  + "fotos portafolio hector valdes m gifs.webp",
+        link: "https://gif-expert-react-mushroom.netlify.app",
+        icons: [iconsUrl[3]]
+    },
+    {
+        title: "Página Indicadores Económicos Chile",
+        desc: 'Sitio web desarrollado con React para mostrar los indicadores económicos más usados en Chile.',
+        urlImg: urlImg  + "fotos portafolio hector valdes m indicadores.webp",
+        link: "https://indicadores-economicos-chile.netlify.app/",
+        icons: [iconsUrl[3]]
+    },
+]
+
+export const Extensiones = [
+    {
+        title: "Extensión Upper Lower Chrome",
+        desc: 'Extensión de Google Chrome para convertir texto en minúsculas, mayúsculas y Capitalizada, desarrollado con HTML, CSS y JavaScript.',
+        urlImg: urlImg  + "fotos portafolio hector valdes m _ Extension para Chrome.webp",
+        link: "https://chrome.google.com/webstore/detail/upperlower/clhpelfcjphahimcabjdabcocdnphnfe",
+        icons: [iconsUrl[0], iconsUrl[2], iconsUrl[10]]
+    },
+    {
+        title: "Extensión Indicadores Económicos Chile",
+        desc: 'Extensión de Google Chrome que muestra los valores indicadores económicos más usado en Chile.',
+        urlImg: urlImg  + "fotos portafolio hector valdes m extension Indicadores.webp",
+        link: "https://chrome.google.com/webstore/detail/upperlower/clhpelfcjphahimcabjdabcocdnphnfe",
+        icons: [iconsUrl[0], iconsUrl[2], iconsUrl[10]]
     },
 ]
 
@@ -46,6 +75,27 @@ export const WordPressProjects = [
         urlImg: urlImg  + 'fotos portafolio hector valdes m _ Frozen Sour.webp',
         link: "https://frozensour.cl/",
         icons: [iconsUrl[4]]
+    },
+    {
+        title: "Sitio web Vivid",
+        desc: "Ecommerce desarrollado en WordPress, Woocommerce, HTML, CSS y JS.",
+        urlImg: urlImg  + 'fotos portafolio hector valdes m vivid.webp',
+        link: "https://www.vivid.cl/",
+        icons: [iconsUrl[0],iconsUrl[1],iconsUrl[2],iconsUrl[6]]
+    },
+    {
+        title: "Sitio web Lubricentro",
+        desc: "Sitio web desarrollado en Wordpress.",
+        urlImg: urlImg  + 'fotos portafolio hector valdes m lubricentro.webp',
+        link: "https://servitecaquintanilla.cl/",
+        icons: [iconsUrl[1],iconsUrl[6]]
+    },
+    {
+        title: "Tienda online Te Moana Ori",
+        desc: "Configuración de pasarela de pagos, productos dinamicos y mailing.",
+        urlImg: urlImg  + 'fotos portafolio hector valdes m temoanaori.webp',
+        link: "https://temoanaori.cl/",
+        icons: [iconsUrl[1],iconsUrl[2],iconsUrl[5],iconsUrl[6]]
     },
     {
         title: "Sitio web empresa Cellzion",
@@ -143,14 +193,7 @@ export const gamesProjects = [
     },
 ]
 
-export const codeProjects = [
-    {
-        title: "Extensión para Google Chrome",
-        desc: 'Extensión para convertir texto en minúsculas, mayúsculas y Capitalizada, desarrollado con HTML, CSS y JavaScript.',
-        urlImg: urlImg  + "fotos portafolio hector valdes m _ Extension para Chrome.webp",
-        link: "https://chrome.google.com/webstore/detail/upperlower/clhpelfcjphahimcabjdabcocdnphnfe",
-        icons: [iconsUrl[2]]
-    },
+export const codeProjects = [    
     {
         title: "Calculadora de IVA",
         desc: 'Función personalizada para un cliente donde permite al usuario calcular IVA y calcular boletas de honorarios, desarrollado con JavaScript insertado en WordPress.',
@@ -163,7 +206,7 @@ export const codeProjects = [
         desc: 'Página pensada como un juego de cartas donde se muestran 3 mazos con diseños diferentes, los cuales se pueden revolver y girar las cartas. Desarrollado con JavaScript insertado en WordPress.',
         urlImg: urlImg  + "fotos portafolio hector valdes m _ Juego cartas por la inclusion.webp",
         link: "https://cartasporlainclusion.com/juego-online/",
-        icons: [iconsUrl[0], iconsUrl[2]]
+        icons: [iconsUrl[0], iconsUrl[2], iconsUrl[10]]
     },
     {
         title: "Mapa interactivo",
@@ -174,16 +217,16 @@ export const codeProjects = [
     },
     {
         title: "Script para comprimir imágenes",
-        desc: 'Script desarrollado en Python para convertir imágenes PNG y JPG a formato para sitios web(WEBP).',
+        desc: 'Script desarrollado en Python para convertir imágenes PNG y JPG a formato para comprimido WEBP.',
         urlImg: urlImg  + "fotos portafolio hector valdes m _ Script python.webp",
         link: "https://github.com/Mushroom0047/Image-converte-py",
         icons: [iconsUrl[9]]
     },
     {
-        title: "Script para contar pixeles",
-        desc: 'Script desarrollado en JavaScript para contar colores de los pixeles de una imágen PNG.',
+        title: "Web y Script para contar pixeles",
+        desc: 'Sitio web desarrollado con HTML, CSS y JavaScript usado para contar colores de los pixeles de una imágen PNG.',
         urlImg: urlImg  + "fotos portafolio hector valdes m  Script contador de pixeles.webp",
-        link: "#",
-        icons: [iconsUrl[2]]
+        link: "https://pixel-counter.netlify.app/",
+        icons: [iconsUrl[0],iconsUrl[2],iconsUrl[10]]
     },
 ]

@@ -17,3 +17,11 @@
     border: 0;
     filter: grayscale(100%);
 }
+
+.bg-image-me{
+    background-image: url('../src/assets/bg-portfolio.webp');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale();
+}
