@@ -15,7 +15,7 @@ const Portfolio = () => {
       label: "WordPress",
       value: "wordpress",
       content: WordPressProjects,
-    },    
+    },
     {
       label: "Códigos web",
       value: "codigos",
@@ -33,20 +33,20 @@ const Portfolio = () => {
     },
     {
       label: "Videojuegos",
-      value: "videojuegos",  
+      value: "videojuegos",
       content: gamesProjects,
     },
   ];
 
   return (
-    <div className="py-8 md:px-16 lg:px-16 xl:px-48">
+    <div id='portafolio' className="py-8 md:px-16 lg:px-16 xl:px-48">
       <div className="text-center px-2">
         <Title title={varTitle} />
         <p className='md:text-left'>{varSubtitle}</p>
       </div>
-      <div className='md:hidden'>
-        {/* PORTAFOLIO DESKTOP */}
-        <div className='w-full flex flex-col justify-center py-4 md:flex-row'>
+      <div className='sm:block md:hidden'>
+        {/* PORTAFOLIO MOBILE */}
+        <div className='w-full flex flex-col justify-center py-4'>
           <div className='w-full flex flex-col md:w-1/3 md:justify-center'>
             <h3 className="oswald font-medium text-xl px-4 py-4">WordPress</h3>
           </div>
@@ -54,7 +54,7 @@ const Portfolio = () => {
             <PortfolioCarousel projectData={WordPressProjects} />
           </div>
         </div>
-        <div className='w-full flex flex-col justify-center py-4 md:flex-row'>
+        <div className='w-full flex flex-col justify-center py-4'>
           <div className='w-full flex flex-col md:w-1/3 md:justify-center'>
             <h3 className="oswald font-medium text-xl px-4 py-4">Videojuegos Desarrollados</h3>
           </div>
@@ -62,7 +62,7 @@ const Portfolio = () => {
             <PortfolioCarousel projectData={gamesProjects} />
           </div>
         </div>
-        <div className='w-full flex flex-col justify-center py-4 md:flex-row'>
+        <div className='w-full flex flex-col justify-center py-4'>
           <div className='w-full flex flex-col md:w-1/3 md:justify-center'>
             <h3 className="oswald font-medium text-xl px-4 py-4">Códigos desarrollados</h3>
           </div>
@@ -72,27 +72,27 @@ const Portfolio = () => {
         </div>
       </div>
       {/* PORTAFOLIO DESKTOP */}
-      <div className='sm:hidden md:flex py-16'>
-      <Tabs value="wordpress" orientation="vertical">
-      <TabsHeader className="w-32 gap-4">
-        {data.map(({ label, value }) => (
-          <Tab key={value} value={value}>
-            {label}
-          </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody>
-        {data.map(({ value, content }) => (
-          <TabPanel key={value} value={value} className="py-0 flex flex-row flex-wrap">
-            {
-              content.map((values, index)=>(
-                  <PortfolioCard key={index} data={values}/>
-              ))
-            }          
-          </TabPanel>
-        ))}
-      </TabsBody>
-    </Tabs>
+      <div className='xs:hidden sm:block  py-16'>
+        <Tabs value="wordpress" orientation="vertical">
+          <TabsHeader className="w-32 gap-4">
+            {data.map(({ label, value }) => (
+              <Tab key={value} value={value}>
+                {label}
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody>
+            {data.map(({ value, content }) => (
+              <TabPanel key={value} value={value} className="py-0 flex flex-row justify-between flex-wrap">
+                {
+                  content.map((values, index) => (
+                    <PortfolioCard key={index} data={values} />
+                  ))
+                }
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
       </div>
     </div>
   )

@@ -1,15 +1,28 @@
 import { Drawer, IconButton, List, ListItem } from "@material-tailwind/react"
 import Icons from '../SocialIcons/Icons';
+import logo from '/Logo-Mushroom.svg';
 import { useState } from "react";
-import logo from '../../../public/Logo-Mushroom.svg';
+
 
 const Header = () => {
   const [open, setOpen] = useState(false);
 
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
+
+  const menuList = [
+    { link: '/#inicio', menu: 'Inicio'},
+    { link: '/#sobre-mi', menu: 'Sobre Mí'},
+    { link: '/#habilidades', menu: 'Habilidades'},
+    { link: '/#conocimientos', menu: 'Conocimientos'},
+    { link: '/#experiencia', menu: 'Experiencia'},
+    { link: '/#educacion', menu: 'Educación'},
+    { link: '/#portafolio', menu: 'Portafolio'},
+    { link: '/#contacto', menu: 'Contacto'}
+  ];
+
   return (
-    <div className="bg-black w-full px-6 py-4 flex items-center">
+    <header className='bg-black w-full px-6 py-4 flex items-center'>
       <div className='w-1/2 flex flex-row gap-2'>
         <img 
          src={logo}
@@ -20,8 +33,8 @@ const Header = () => {
         <h2 className="text-white font-medium text-xl oswald">HÉCTOR VALDÉS M.</h2>
       </div>
       <div className='w-1/2 flex justify-end'>
-        <img className='img-drawer' onClick={openDrawer} width="25" height="25" src="https://img.icons8.com/ios/25/ffffff/menu--v1.png" alt="menu--v1" />
-        <Drawer open={open} onClose={closeDrawer} className="p-4" placement='right'>
+        <img className='hover:cursor-pointer' onClick={openDrawer} width="25" height="25" src="https://img.icons8.com/ios/25/ffffff/menu--v1.png" alt="menu--v1" />
+        <Drawer overlay={false} open={open} onClose={closeDrawer} className="p-4" placement='right'>
           <div className="mb-6 flex items-center justify-between">
             <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
               <svg
@@ -42,14 +55,15 @@ const Header = () => {
           </div>
           <div className="flex gap-2">
             <List>
-              <ListItem>Inicio</ListItem>
-              <ListItem>Sobre Mí</ListItem>
-              <ListItem>Habilidades</ListItem>
-              <ListItem>Conocimientos</ListItem>
-              <ListItem>Experiencia</ListItem>
-              <ListItem>Educación</ListItem>
-              <ListItem>Portafolio</ListItem>
-              <ListItem>Contacto</ListItem>
+              {
+                menuList.map(({link, menu}, index)=>(
+                  <a href={link} key={index} onClick={closeDrawer}>
+                    <ListItem className="hover:bg-border-dfac hover:text-white">                                        
+                        {menu}
+                    </ListItem>
+                  </a>              
+                ))
+              }
             </List>
           </div>
           <div className="absolute bottom-5 flex justify-center w-full">
@@ -57,7 +71,7 @@ const Header = () => {
           </div>
         </Drawer>
       </div>
-    </div>
+    </header>
   )
 }
 

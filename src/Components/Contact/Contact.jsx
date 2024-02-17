@@ -6,7 +6,7 @@ const Contact = () => {
   const varTitle = 'CONTACTO';
   const vatSubtitle = 'Si buscas un desarrollo web que destaque y cumpla con tus necesidades, ¡estás en el lugar correcto! Estoy aquí para escucharte y trabajar contigo en cada paso del proceso.';
   return (
-    <div className="py-8 bg-cs-grey md:px-16 lg:px-24 xl:px-96">
+    <div id='contacto' className="py-8 bg-cs-grey md:px-16 lg:px-24 xl:px-96">
       <div className="w-full">
         <Title title={varTitle} />
         <p className='text-center pb-4 md:text-left'>{vatSubtitle}</p>

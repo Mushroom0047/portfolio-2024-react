@@ -9,6 +9,7 @@ import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import './App.css';
 import Knowledge from './Components/Knowledge/Knowledge';
+import ScrollTop from './Components/ScrollTop/ScrollTop';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
+      <ScrollTop />
     </>
   )
 }

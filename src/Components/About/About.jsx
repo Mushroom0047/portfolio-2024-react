@@ -15,7 +15,7 @@ const About = () => {
     const linkCv = cv;
 
     return (
-        <div className="w-full h-full flex flex-row py-8 lg:px-16 xl:px-32">
+        <div id='sobre-mi' className="w-full h-full flex flex-row py-8 lg:px-16 xl:px-32">
             <div className='w-full md:w-1/2'>
                 <div className="w-full flex flex-col justify-center">
                     <div className="px-5">
@@ -63,7 +63,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-1/2 bg-image-me'>                          
+            <div className='bg-image-me sm:hidden md:block md:w-1/2'>                
             </div>
         </div>
     )

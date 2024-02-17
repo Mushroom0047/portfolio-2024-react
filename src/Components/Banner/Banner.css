@@ -4,10 +4,13 @@
     background-position: center;
     background-repeat: none;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
+
 .overlay{
     width: 100%;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.5);
 }
 .img-icon{
     transition: 0.4s;
