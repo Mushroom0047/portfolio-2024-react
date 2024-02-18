@@ -24,7 +24,7 @@ const Experience = () => {
   ]
   const varTitle = 'EXPERIENCIA';
   const varSubtitle = '3 años de experiencia';
-  const varText = 'Con más de tres años de experiencia como Frontend Developer, transformo conceptos creativos en interfaces atractivas y eficientes. Desde la implementación de diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar la estética con la funcionalidad. Construyo sitios web dinámicos y visualmente impactantes, haciendo que su presencia en línea sea memorable y efectiva.';
+  const varText = 'Con más de tres años de experiencia como Frontend Developer, transformando conceptos creativos en interfaces atractivas y eficientes. Desde la implementación de diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar la estética con la funcionalidad. Construyendo sitios web dinámicos y visualmente impactantes, haciendo que su presencia en línea de mis clientes sea memorable y efectiva.';
   return (
     <div id='experiencia' className="w-full text-left py-8 px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%]">
       <div className="px-5">
@@ -33,7 +33,7 @@ const Experience = () => {
       </div>
       <div className='px-5'>
         {
-          data.map((data, index) => (            
+          data.map((data, index) => (
             <div key={index} className='flex flex-row flex-wrap py-8 border-b-2'>
               <div className='w-1/2'>
                 <h3 className='font-bold oswald text-lg'>{data.empresa}</h3>
@@ -44,7 +44,7 @@ const Experience = () => {
               </div>
               <div className='w-full py-8'>
                 <p>{data.desc}</p>
-              </div>              
+              </div>
             </div>
           ))
         }

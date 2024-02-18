@@ -33,7 +33,7 @@
     scroll-behavior: smooth;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 720px) {
     .d-none {
       display: none !important;
     }

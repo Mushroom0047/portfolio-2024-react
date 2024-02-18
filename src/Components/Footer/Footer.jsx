@@ -1,6 +1,6 @@
 import imgFooter from '/logo_white.png';
 const Footer = () => {
-  const textFooter = 'PORTAFOLIO HÉCTOR VALDÉS M. | MUSHROOM 🍄 | DESARROLLADO EN REACT';
+  const textFooter = '2024 | PORTAFOLIO HÉCTOR VALDÉS M. | MUSHROOM 🍄 | DESARROLLADO EN REACT';
   
   return (
     <>
