@@ -7,9 +7,9 @@ import Education from './Components/Education/Education';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
-import './App.css';
 import Knowledge from './Components/Knowledge/Knowledge';
 import ScrollTop from './Components/ScrollTop/ScrollTop';
+import './App.css';
 
 const App = () => {
   return (
