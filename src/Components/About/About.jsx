@@ -15,7 +15,7 @@ const About = () => {
     const linkCv = cv;
 
     return (
-        <div id='sobre-mi' className="w-full h-full flex flex-row py-8 lg:px-16 xl:px-32">
+        <div id='sobre-mi' className="w-full h-full flex flex-row py-8 md:px-[2%] lg:px-[10%] xl:px-[15%]">
             <div className='w-full md:w-1/2'>
                 <div className="w-full flex flex-col justify-center">
                     <div className="px-5">

@@ -17,7 +17,7 @@ const Education = () => {
   ]
   const varTitle = 'EDUCACIÓN';
   return (
-    <div id="educacion" className="w-full text-left py-8 bg-cs-grey md:px-16 lg:px-32 xl:px-96">
+    <div id="educacion" className="w-full text-left py-8 bg-cs-grey px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%]">
       <Title title={varTitle}/>
       <div className='px-5'>
         {

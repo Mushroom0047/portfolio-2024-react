@@ -19,13 +19,13 @@ const Skills = () => {
     const skills = 'Mi enfoque organizado se refleja en la gestión eficiente de tareas y proyectos, garantizando plazos cumplidos. La comunicación clara y efectiva facilita la colaboración con equipos multidisciplinarios. Mi habilidad para adaptarme a entornos dinámicos y aprender rápidamente me permite enfrentar desafíos con resiliencia. Con equilibrio entre habilidades técnicas y blandas, estoy comprometido a llevar cada proyecto al siguiente nivel de éxito y eficiencia.';
      
   return (
-    <div id='habilidades' className="px-8 border-b-2 text-center bg-cs-grey py-12 md:px-16 lg:px-32 lg:py-16 xl:px-96 xl:py-24">
+    <div id='habilidades' className="px-[5%] border-b-2 text-center bg-cs-grey py-12 md:px-[5%] lg:px-[10%] xl:px-[15%]">
         <Title title='HABILIDADES'/>
         <p>{skills}</p>
         <div className='w-full flex flex-row flex-wrap'>
           {
             lotties.map((data, index) =>(
-              <div key={index} className='w-1/2 px-8 md:w-1/3 lg:w-1/3 lg:px-16 xl:w-1/3 xl:px-20 2xl:px-20 2xl:w-1/6 2xl:pt-16'>
+              <div key={index} className='w-1/2 pb-8 px-[10%] md:px-[8%] lg:px-[10%] md:w-1/3 lg:w-1/3 '>
                 <LottieAnim animationData={data.src}/>
                 <h3 className='oswald text-md'>{data.name}</h3>
               </div>

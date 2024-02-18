@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PortfolioCard = ({ data }) => {
   const { title, desc, urlImg, link, icons } = data;
   return (
-    <Card className="mx-auto max-w-[22rem] shadow-lg mb-4 md:max-w-[20rem]">
+    <Card className="mx-auto max-w-[22rem] shadow-lg mb-4 sm:w-full sm:max-w-[20rem]">
       <CardHeader floated={false} color="blue-gray">
         <img        
           src={urlImg}
