@@ -29,14 +29,14 @@ const Contact = () => {
               </h4>
             </div>
           </div>
-          <div className='w-1/3 flex flex-col items-center gap-2 md:flex-row '>
+          <div className='w-full flex flex-col items-center gap-2 md:flex-row'>
             <img
               width="50"
               height="50"
               className='transition-transform hover:scale-125 hover:transition-transform cursor-pointer'
               src="https://img.icons8.com/ios-filled/50/dfac13/filled-message.png"
               alt="filled-message" />
-            <div className='text-center lg:text-left pl-3'>
+            <div className='w-full text-center lg:text-left pl-3'>
               <h3 className='roboto text-sm font-bold'>Email</h3>
               <h4 className='roboto text-xs hover:text-border-dfac cursor-pointer'>
                 <a href="mailto:hectorvaldesm47@gmail.com" target="_blank" rel="noopener noreferrer">
