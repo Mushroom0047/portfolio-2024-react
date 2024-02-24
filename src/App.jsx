@@ -1,32 +1,17 @@
-import Header from './Components/Header/Header';
-import Banner from './Components/Banner/Banner';
-import About from './Components/About/About';
-import Skills from './Components/Skills/Skills';
-import Experience from './Components/Experience/Experience';
-import Education from './Components/Education/Education';
-import Portfolio from './Components/Portfolio/Portfolio';
-import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
-import Knowledge from './Components/Knowledge/Knowledge';
-import ScrollTop from './Components/ScrollTop/ScrollTop';
-import './App.css';
 
-const App = () => {
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import { PrivacyPolicyUpperLower } from './pages/PrivacyPolicyUpperLower';
+
+function App() {
   return (
-    <>
-      <Header />
-      <Banner />
-      <About />
-      <Skills />
-      <Knowledge />
-      <Experience />
-      <Education />
-      <Portfolio />
-      <Contact />
-      <Footer />
-      <ScrollTop />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy-upper-lower" element={<PrivacyPolicyUpperLower />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
