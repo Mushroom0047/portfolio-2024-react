@@ -97,7 +97,7 @@ const Portfolio = () => {
           </TabsHeader>
           <TabsBody>
             {data.map(({ value, content }) => (
-              <TabPanel key={value} value={value} className="py-0 grid grid-cols-4 sm:gap-3 gap-6 sm:grid-cols-3">
+              <TabPanel key={value} value={value} className="py-0 grid gap-3 grid-cols-3 2xl:grid-cols-4 2xl:gap-6">
                 {
                   content.map((values, index) => (
                     <PortfolioCard key={index} data={values} />
