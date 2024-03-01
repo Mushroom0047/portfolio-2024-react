@@ -3,6 +3,28 @@ import Title from '../General/Title';
 import Icons from '../SocialIcons/Icons';
 
 const Contact = () => {
+  const contactData = [
+    { 
+      title: 'Dirección', 
+      data: 'Valparaíso, Chile.', 
+      url: 'https://maps.app.goo.gl/YeCsMEQ1D8QHA6N66', 
+      icon: 'https://img.icons8.com/ios-filled/50/dfac13/address--v1.png' 
+    },
+    { 
+      title: 'Email', 
+      data: 'hectorvaldesm47@gmail.com', 
+      url: 'mailto:hectorvaldesm47@gmail.com', 
+      icon: 'https://img.icons8.com/ios-filled/50/dfac13/filled-message.png'
+    },
+    { 
+      title: 'Teléfono', 
+      data: '+569 7844 2352', 
+      url: 'tel:56978442352', 
+      icon: 'https://img.icons8.com/ios-filled/50/dfac13/smartphone--v1.png' 
+    },
+  ]
+
+
   const varTitle = 'CONTACTO';
   const vatSubtitle = 'Si buscas un desarrollo web que destaque y cumpla con tus necesidades, ¡estás en el lugar correcto! Estoy aquí para escucharte y trabajar contigo en cada paso del proceso.';
   return (
@@ -13,54 +35,28 @@ const Contact = () => {
       </div>
       <div className='w-full flex flex-col md:flex-row'>
         <div className='w-full flex flex-row justify-center md:flex-col md:gap-12 md:w-1/3 '>
-          <div className='w-full flex flex-col items-center gap-2 md:flex-row '>
-            <img
-              width="50"
-              height="50"
-              className='transition-transform hover:scale-125 hover:transition-transform cursor-pointer'
-              src="https://img.icons8.com/ios-filled/50/dfac13/address--v1.png"
-              alt="address--v1" />
-            <div className='text-center lg:text-left pl-3'>
-              <h3 className='roboto text-sm font-bold'>Dirección</h3>
-              <h4 className='roboto text-xs hover:text-border-dfac cursor-pointer'>
-                <a href="https://maps.app.goo.gl/YeCsMEQ1D8QHA6N66" target='blank' rel="noopener noreferrer">
-                  Valparaíso, Chile.
-                </a>
-              </h4>
-            </div>
-          </div>
-          <div className='w-full flex flex-col items-center gap-2 md:flex-row'>
-            <img
-              width="50"
-              height="50"
-              className='transition-transform hover:scale-125 hover:transition-transform cursor-pointer'
-              src="https://img.icons8.com/ios-filled/50/dfac13/filled-message.png"
-              alt="filled-message" />
-            <div className='w-full text-center lg:text-left pl-3'>
-              <h3 className='roboto text-sm font-bold'>Email</h3>
-              <h4 className='roboto text-xs hover:text-border-dfac cursor-pointer'>
-                <a href="mailto:hectorvaldesm47@gmail.com" target="_blank" rel="noopener noreferrer">
-                  hectorvaldesm47@gmail.com
-                </a>
-              </h4>
-            </div>
-          </div>
-          <div className='w-full flex flex-col items-center gap-2 md:flex-row '>
-            <img
-              width="50"
-              height="50"
-              className='transition-transform hover:scale-125 hover:transition-transform cursor-pointer'
-              src="https://img.icons8.com/ios-filled/50/dfac13/smartphone--v1.png"
-              alt="smartphone--v1" />
-            <div className='text-center lg:text-left pl-3'>
-              <h3 className='roboto text-sm font-bold'>Teléfono</h3>
-              <h4 className='roboto text-xs hover:text-border-dfac cursor-pointer'>
-                <a href="tel:56978442352" target="_blank" rel="noopener noreferrer">
-                  +569 7844 2352
-                </a>
-              </h4>
-            </div>
-          </div>
+          {
+            contactData.map(({title, data, url, icon},index) => (
+              <div key={index} className='w-full flex flex-col items-center gap-2 md:flex-row'>
+                <a href={url} target='blank' rel="noopener noreferrer">
+                <img
+                  width="50"
+                  height="50"
+                  className='transition-transform hover:scale-125 hover:transition-transform cursor-pointer'
+                  src={icon}
+                  alt={title} />
+                  </a>
+                <div className='text-center lg:text-left pl-3'>
+                  <h3 className='roboto text-sm font-bold'>{title}</h3>
+                  <h4 className='roboto text-xs hover:text-border-dfac cursor-pointer'>
+                    <a href={url} target='blank' rel="noopener noreferrer">
+                     {data}
+                    </a>
+                  </h4>
+                </div>
+              </div>
+            ))
+          }
         </div>
         <div className='w-full py-8 md:w-2/3 '>
           <Iframe

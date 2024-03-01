@@ -1,3 +1,4 @@
+import { Tooltip } from '@material-tailwind/react';
 import bootstrap from '../../assets/Logos/bootstrap.png';
 import css from '../../assets/Logos/css.png';
 import elementor from '../../assets/Logos/elementor.png';
@@ -53,13 +54,21 @@ const Knowledge = () => {
         {
           icons.map((icon, index) => (
             <div key={index} className='w-1/3 flex py-8 justify-center md:w-1/6'>
+              <Tooltip
+                content={icon.alt}
+                animate={{
+                  mount: { scale: 1, y: 0 },
+                  unmount: { scale: 0, y: 25 },
+                }}
+              >
               <img                
                 className='img-icon p-2 cursor-pointer'
                 width='80px'
                 height='80px'
                 src={icon.src}
                 alt={icon.alt}
-                title={icon.alt} />
+               />
+              </Tooltip>
             </div>
           ))
         }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PortfolioCard = ({ data }) => {
   const { title, desc, urlImg, link, icons } = data;
   return (
-    <Card className="mx-auto max-w-[22rem] shadow-lg mb-4 sm:w-full sm:max-w-[20rem]">
+    <Card className="shadow-lg mb-4 sm:w-1/2 sm:mx-auto lg:mx-0 lg:w-full">
       <CardHeader floated={false} color="blue-gray">
         <img        
           src={urlImg}
@@ -14,13 +14,20 @@ const PortfolioCard = ({ data }) => {
       </CardHeader>
       <CardBody>
         <div className="mb-3 flex items-center justify-between">
-          <h5 className="oswald text-lg">{title}</h5>
+          <p className="oswald text-xl font-bold">{title}</p>
         </div>
         <p className="roboto">{desc}</p>
         <div className="group mt-8 inline-flex flex-wrap items-center gap-1">
           {
             icons?.map((icon, index) => (
-              <Tooltip content={icon.name} key={index}>
+              <Tooltip 
+                content={icon.name} 
+                key={index}
+                animate={{
+                  mount: { scale: 1, y: 0 },
+                  unmount: { scale: 0, y: 25 },
+                }}
+              >
                 <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                   <img 
                     src={icon.url} 

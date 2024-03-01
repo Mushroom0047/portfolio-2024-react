@@ -6,7 +6,7 @@ const PortfolioCarousel = ({ projectData }) => {
     return (
         <Carousel
             loop={true}
-            className='w-full py-4'
+            className='py-4'
             navigation={({ setActiveIndex, activeIndex, length }) => (
                 <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
                     {new Array(length).fill("").map((_, i) => (

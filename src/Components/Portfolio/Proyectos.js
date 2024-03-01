@@ -43,6 +43,7 @@ import codeImg2 from "../../assets/ProjectsImages/fotos portafolio hector valdes
 import codeImg3 from "../../assets/ProjectsImages/fotos portafolio hector valdes m _ Mapa interactivo con proyectos.webp";
 import codeImg4 from "../../assets/ProjectsImages/fotos portafolio hector valdes m _ Script python.webp";
 import codeImg5 from "../../assets/ProjectsImages/fotos portafolio hector valdes m  Script contador de pixeles.webp";
+import codeImg6 from "../../assets/ProjectsImages/fotos portafolio hector valdes m ind eco chile wp.webp";
 
 
 const iconsUrl = [
@@ -275,5 +276,12 @@ export const codeProjects = [
         urlImg: codeImg5,
         link: "https://pixel-counter.netlify.app/",
         icons: [iconsUrl[0],iconsUrl[2],iconsUrl[10]]
+    },
+    {
+        title: "Plugin Wordpress Indicadores Económicos Chile",
+        desc: 'Plugin para obtener mediante un shortcode los valores de las divisas más utilizadas en chile, con esto aprendí un poco más sobre php, sobre el funcionamiento de Wordpress y a subir plugins a la tienda oficial de Wordpress.',
+        urlImg: codeImg6,
+        link: "https://wordpress.org/plugins/indicadores-economicos-chile",
+        icons: [iconsUrl[0],iconsUrl[7]]
     },
 ]
