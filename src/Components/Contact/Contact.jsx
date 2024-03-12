@@ -16,12 +16,6 @@ const Contact = () => {
       url: 'mailto:hectorvaldesm47@gmail.com', 
       icon: 'https://img.icons8.com/ios-filled/50/dfac13/filled-message.png'
     },
-    { 
-      title: 'Teléfono', 
-      data: '+569 7844 2352', 
-      url: 'tel:56978442352', 
-      icon: 'https://img.icons8.com/ios-filled/50/dfac13/smartphone--v1.png' 
-    },
   ]
 
 

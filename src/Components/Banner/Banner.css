@@ -1,9 +1,10 @@
 .hero-section{
     height: 70vh;
     background-image: url('../../assets/banner-responsive.webp');
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     position: relative;
     overflow: hidden;
 }
