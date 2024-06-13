@@ -5,10 +5,19 @@ import logoUpper from '../assets/iconoapp.png';
 export const PrivacyPolicyUpperLower = () => {
     return (
         <>
-            <section className='py-5 container mx-auto'>
+            <section className='py-5 container mx-auto mb-10'>
                 <div className='px-5'>
                     <h1 className='oswald text-4xl text-center'>Privacy Policy</h1>
                     <h2 className='oswald text-2xl text-center'>Upper Lower Extension</h2>
+                    <h3 className='oswald text-l text-center'>
+                        <a href="https://hectorvaldes.dev"
+                            title="Portafolio de Héctor Valdés"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            aria-label="Portafolio de Héctor Valdés - Proyectos y experiencia">
+                            by Mushroom 🍄
+                        </a>
+                    </h3>
                     <img 
                         className="mx-auto"
                         src={logoUpper} 
@@ -17,7 +26,8 @@ export const PrivacyPolicyUpperLower = () => {
                         />
                     <br />
                     <br />
-                    <p>Effective Date: 31-10-2023</p>
+                    <p>Effective Date: 06/13/2024</p>
+                    <p>Version: 1.4.2</p>
                     <p>
                         Your privacy is important to us. This Privacy Policy explains how we collect, use, and share your information when you use our Chrome application, which has been developed to enhance your browsing experience. By using our application, you agree to the practices described in this Privacy Policy.
                     </p>
