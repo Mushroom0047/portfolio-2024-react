@@ -12,12 +12,7 @@ const Icons = ({color, size, filled}) => {
       src: `https://img.icons8.com${fill}${color}/48/linkedin.png`,
       alt: 'Linkedin icon',
       url: 'https://www.linkedin.com/in/hector-valdes-m/'
-    },
-    {
-      src: `https://img.icons8.com${fill}${color}/48/instagram-new--v1.png`,
-      alt: 'Instagram icon',
-      url: 'https://www.instagram.com/mushroom.dev/?hl=es-la'
-    },
+    },    
     {
       src: `https://img.icons8.com${fill}${color}/48/steam.png`,
       alt: 'Steam icon',
