@@ -13,11 +13,11 @@ const Portfolio = () => {
   const [categoryIds, setCategoryIds] = useState([]);
   const [projectsList, setProjectsList] = useState([]);
 
-  const { data:categories, error:errCategories, loading:loadingCategories } = useFetch(
+  const { data:categories } = useFetch(
     'https://backend.hectorvaldes.dev/wp/wp-json/wp/v2/categories?acf_format=standard'
   );
 
-  const { data:projects, error:errProjects, loading:loadingProjects } = useFetch(
+  const { data:projects, loading:loadingProjects } = useFetch(
     'https://backend.hectorvaldes.dev/wp/wp-json/wp/v2/portfolio?per_page=100'
   );
 
@@ -74,9 +74,9 @@ const Portfolio = () => {
         <p>{descripcion}</p>
       </div>
       {isMobile ? (
-        <ProjectsMobile idData={categoryIds} projectsData={projectsList}/>
+        <ProjectsMobile idData={categoryIds} projectsData={projectsList} loadingProjects={loadingProjects}/>
       ): (
-        <ProjectsDesktop idData={categoryIds} projectsData={projectsList}/>
+        <ProjectsDesktop idData={categoryIds} projectsData={projectsList} loadingProjects={loadingProjects}/>
       )}
     </div>
   )

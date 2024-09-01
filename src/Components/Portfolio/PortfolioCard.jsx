@@ -20,7 +20,7 @@ const PortfolioCard = ({ data }) => {
   ]
   
   return (
-    <Card className="shadow-lg mb-4 sm:mx-auto lg:mx-0 ">
+    <Card className="shadow-lg mb-4 sm:mx-auto lg:mx-0 flex flex-col justify-between">
       <CardHeader floated={false} color="blue-gray">
         <img        
           src={featured_media_src_url}

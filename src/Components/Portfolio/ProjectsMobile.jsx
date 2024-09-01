@@ -1,8 +1,8 @@
-import { Carousel, IconButton, Typography } from "@material-tailwind/react";
+import { Carousel, IconButton, Spinner, Typography } from "@material-tailwind/react";
 import PortfolioCard from "./PortfolioCard";
 import PropTypes from 'prop-types';
 
-const ProjectsMobile = ({ idData, projectsData }) => {
+const ProjectsMobile = ({ idData, projectsData, loadingProjects }) => {
     return (
         <div className='sm:block'>
             {idData.map(({ id, title }) => (
@@ -75,11 +75,16 @@ const ProjectsMobile = ({ idData, projectsData }) => {
                                 </IconButton>
                             )}
                         >
-                            {projectsData
-                                .filter(project => project.categories.includes(id))
-                                .map((project, index) => (
-                                    <PortfolioCard key={index} data={project} />
-                                ))
+                            {
+                                loadingProjects ?(
+                                    <Spinner />
+                                ):(
+                                    projectsData
+                                        .filter(project => project.categories.includes(id))
+                                        .map((project, index) => (
+                                            <PortfolioCard key={index} data={project} />
+                                        ))
+                                )
                             }
                         </Carousel>
                     </div>
@@ -92,6 +97,7 @@ const ProjectsMobile = ({ idData, projectsData }) => {
 ProjectsMobile.propTypes = {
     idData: PropTypes.array.isRequired,
     projectsData: PropTypes.array.isRequired,
+    loadingProjects: PropTypes.bool.isRequired,
 };
 
 export default ProjectsMobile;

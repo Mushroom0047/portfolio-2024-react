@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
 
 
 const Icons = ({ color, size, filled }) => {
@@ -21,37 +20,17 @@ const Icons = ({ color, size, filled }) => {
       url: 'https://steamcommunity.com/id/mushroom0047/'
     },
   ];
-   // Definir las variantes de animación
-   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,  // Defase temporal entre cada hijo
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
-  };
 
   return (
-    <motion.div
+    <div
       className="flex gap-6 justify-center"
-      variants={ containerVariants }
-      initial="hidden"
-      animate="visible"
     >
       {iconsList.map((icon, index) => (
-        <motion.a 
+        <a 
           key={index} 
           href={icon.url} 
           target="_blank" 
-          rel="noopener noreferrer"
-          variants={itemVariants}  // Aplica las variantes a cada ítem
-          whileHover={{ scale: 1.2, rotate: 15 }}
+          rel="noopener noreferrer"          
         >
           <img
             className="img-icon"
@@ -60,9 +39,9 @@ const Icons = ({ color, size, filled }) => {
             width={size}
             height={size}
           />
-        </motion.a>        
+        </a>        
       ))}
-    </motion.div>
+    </div>
   );
 }
 Icons.propTypes = {
