@@ -1,6 +1,8 @@
 import Iframe from 'react-iframe';
 import Title from '../General/Title';
 import Icons from '../SocialIcons/Icons';
+import texts from '../../assets/texts.json';
+
 
 const Contact = () => {
   const contactData = [
@@ -18,14 +20,13 @@ const Contact = () => {
     },
   ]
 
-
-  const varTitle = 'CONTACTO';
-  const vatSubtitle = 'Si buscas un desarrollo web que destaque y cumpla con tus necesidades, ¡estás en el lugar correcto! Estoy aquí para escucharte y trabajar contigo en cada paso del proceso.';
+  const { titulo, descripcion } = texts.contact;
+  
   return (
     <div id='contacto' className="py-8 bg-cs-grey px-[5%] md:px-[5%] lg:px-[15%]">
       <div className="w-full">
-        <Title title={varTitle} />
-        <p className='text-center pb-4 md:text-left'>{vatSubtitle}</p>
+        <Title title={titulo} />
+        <p className='text-center pb-4 md:text-left'>{descripcion}</p>
       </div>
       <div className='w-full flex flex-col md:flex-row'>
         <div className='w-full flex flex-row justify-center md:flex-col md:gap-12 md:w-1/3 '>

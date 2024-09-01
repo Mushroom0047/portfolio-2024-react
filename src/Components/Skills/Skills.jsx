@@ -6,6 +6,7 @@ import equipoLottie from '../../assets/Lottie/three-male-avatars.json';
 import organizacionLottie from '../../assets/Lottie/noticeboard.json';
 import LottieAnim from './LottieAnim';
 import Title from '../General/Title';
+import texts from '../../assets/texts.json';
 
 const Skills = () => {
     const lotties = [
@@ -16,16 +17,16 @@ const Skills = () => {
         { name: 'Trabajo en Equipos', src: equipoLottie },
         { name: 'Organización', src: organizacionLottie },
     ];
-    const skills = 'Mi enfoque organizado se refleja en la gestión eficiente de tareas y proyectos, garantizando plazos cumplidos. La comunicación clara y efectiva facilita la colaboración con equipos multidisciplinarios. Mi habilidad para adaptarme a entornos dinámicos y aprender rápidamente me permite enfrentar desafíos con resiliencia. Con equilibrio entre habilidades técnicas y blandas, estoy comprometido a llevar cada proyecto al siguiente nivel de éxito y eficiencia.';
+    const { titulo, descripcion } = texts.skills;
      
   return (
-    <div id='habilidades' className="px-[5%] border-b-2 text-center bg-cs-grey py-12 md:px-[5%] lg:px-[10%] xl:px-[15%]">
-        <Title title='HABILIDADES'/>
-        <p>{skills}</p>
-        <div className='w-full flex flex-row flex-wrap'>
+    <div id='habilidades' className="border-b-2 text-center bg-cs-grey py-12 px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%]">
+        <Title title={titulo}/>
+        <p>{descripcion}</p>
+        <div className='w-full flex flex-row flex-wrap mt-5'>
           {
             lotties.map((data, index) =>(
-              <div key={index} className='w-1/2 pb-8 px-[10%] md:px-[8%] lg:px-[10%] md:w-1/3 lg:w-1/3 '>
+              <div key={index} className='flex flex-col items-center w-1/2 pb-8 px-[10%] md:px-[8%] lg:px-[10%] md:w-1/3 lg:w-1/3 '>
                 <LottieAnim animationData={data.src}/>
                 <h3 className='oswald text-md'>{data.name}</h3>
               </div>

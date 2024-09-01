@@ -1,0 +1,45 @@
+{
+    "banner":{
+        "titulo": "Hola, mi nombre es ",
+        "titulo2": "Héctor Valdés M",
+        "subtitulo": "Frontend Developer"
+    },
+    "about":{
+        "nombre": "Héctor Valdés M.",
+        "email": "hectorvaldesm47",
+        "fechaNacimiento":"16 Mayo 1995",
+        "direccion":"Valparaíso, Chile",
+        "nacionalidad":"Chilena",
+        "titulo": "SOBRE MÍ",
+        "subtitulo": "Perfil profesional",
+        "perfil":"Estoy comprometido a crear productos digitales de calidad que sean fáciles de usar y ofrezcan la mejor experiencia para los usuarios. Siempre estoy aprendiendo nuevas tecnologías y me aseguro de estar al tanto de los últimos avances en el desarrollo web.",
+        "descargar": "DESCARGAR CURRICULUM EN PDF"
+    },
+    "skills":{
+        "titulo":"HABILIDADES",
+        "descripcion":"Mi enfoque organizado se refleja en la gestión eficiente de tareas y proyectos, garantizando plazos cumplidos. La comunicación clara y efectiva facilita la colaboración con equipos multidisciplinarios. Mi habilidad para adaptarme a entornos dinámicos y aprender rápidamente me permite enfrentar desafíos con resiliencia. Con equilibrio entre habilidades técnicas y blandas, estoy comprometido a llevar cada proyecto al siguiente nivel de éxito y eficiencia."
+    },
+    "knowledge":{
+     "titulo":"Conocimientos",   
+     "descripcion":"Como apasionado Frontend Developer, destaco por mis habilidades excepcionales en la creación de interfaces altamente atractivas e intuitivas. Transformo conceptos en código, dando vida a sitios web dinámicos. Mi dominio abarca HTML, CSS, JavaScript y diversos frameworks modernos como React. Especializado en diseño responsivo y optimización del rendimiento, cada proyecto es una oportunidad para demostrar mi destreza en fusionar la estética con la eficiencia."   
+    },
+    "experience":{
+        "titulo":"EXPERIENCIA",
+        "subtitulo":"3 años de experiencia",
+        "descripcion":"Con más de tres años de experiencia como Frontend Developer, transformando conceptos creativos en interfaces atractivas y eficientes. Desde la implementación de diseños responsivos hasta la optimización del rendimiento, cada proyecto es una oportunidad para fusionar la estética con la funcionalidad. Construyendo sitios web dinámicos y visualmente impactantes, haciendo que su presencia en línea de mis clientes sea memorable y efectiva."
+    },
+    "education":{
+        "titulo":"EDUCACIÓN"
+    },
+    "portafolio":{
+        "titulo": "PORTAFOLIO",
+        "descripcion": "Explora mi portafolio para descubrir proyectos diversos, desde sitios en WordPress y Shopify hasta desarrollos en HTML. Implemento funcionalidades interactivas con JavaScript y creo emocionantes juegos en Game Maker. Descubre mi enfoque creativo y versátil explorando mi trabajo."
+    },
+    "contact":{
+        "titulo":"CONTACTO",
+        "descripcion":"Si buscas un desarrollo web que destaque y cumpla con tus necesidades, ¡estás en el lugar correcto! Estoy aquí para escucharte y trabajar contigo en cada paso del proceso."
+    },
+    "footer":{
+        "text": "2024 | PORTAFOLIO HÉCTOR VALDÉS M. | MUSHROOM 🍄 | DESARROLLADO EN REACT"
+    }
+}

@@ -1,6 +1,8 @@
 import imgFooter from '/logo_white.png';
+import texts from '../../assets/texts.json';
+
 const Footer = () => {
-  const textFooter = '2024 | PORTAFOLIO HÉCTOR VALDÉS M. | MUSHROOM 🍄 | DESARROLLADO EN REACT';
+  const { text } = texts.footer;
   
   return (
     <>
@@ -13,7 +15,7 @@ const Footer = () => {
             width='400'
             height='auto'/>
         </a>
-        <p className="roboto text-xs text-white text-center">{textFooter}</p>
+        <p className="roboto text-xs text-white text-center">{ text }</p>
       </div>
       <div className="js-pride-month-gradient"></div>
     </>

@@ -1,113 +1,83 @@
-import React from 'react';
-import { Tab, TabPanel, Tabs, TabsBody, TabsHeader } from '@material-tailwind/react';
 import Title from '../General/Title';
-import PortfolioCarousel from './PortfolioCarousel.jsx';
-import { WordPressProjects, gamesProjects, codeProjects, reactProjects, Extensiones } from './Proyectos.js';
-import PortfolioCard from './PortfolioCard.jsx';
-
-import jsIcon from '../../assets/svgIcons/icons8-javascript.svg';
-import wpIcon from '../../assets/svgIcons/icons8-wordpress.svg';
-import reactIcon from '../../assets/svgIcons/icons8-reaccionar-nativo.svg';
-import gmsIcon from '../../assets/svgIcons/icons8-gms.svg';
-import extIcon from '../../assets/svgIcons/icons8-chrome.svg';
-
+import texts from '../../assets/texts.json';
+import useFetch from '../Hooks/useFetch';
+import { useEffect, useState } from 'react';
+import ProjectsMobile from './ProjectsMobile.jsx';
+import ProjectsDesktop from './ProjectsDesktop.jsx';
 
 const Portfolio = () => {
-  const varTitle = 'PORTAFOLIO';
-  const varSubtitle = 'Explora mi portafolio para descubrir proyectos diversos, desde sitios en WordPress y Shopify hasta desarrollos en HTML. Implemento funcionalidades interactivas con JavaScript y creo emocionantes juegos en Game Maker. Descubre mi enfoque creativo y versátil explorando mi trabajo.';
+  const [isMobile, setIsMobile] = useState(false);
 
-  const data = [
-    {
-      label: "WordPress",
-      value: "wordpress",
-      content: WordPressProjects,
-      icon: wpIcon
-    },
-    {
-      label: "Proyectos web",
-      value: "proyectos",
-      content: codeProjects,
-      icon: jsIcon
-    },
-    {
-      label: "Extensiones",
-      value: "extensiones",
-      content: Extensiones,
-      icon: extIcon
-    },
-    {
-      label: "React",
-      value: "react",
-      content: reactProjects,
-      icon: reactIcon
-    },
-    {
-      label: "Videojuegos",
-      value: "videojuegos",
-      content: gamesProjects,
-      icon: gmsIcon
-    },
-  ];
+  const { titulo, descripcion } = texts.portafolio;
+
+  const [categoryIds, setCategoryIds] = useState([]);
+  const [projectsList, setProjectsList] = useState([]);
+
+  const { data:categories, error:errCategories, loading:loadingCategories } = useFetch(
+    'https://backend.hectorvaldes.dev/wp/wp-json/wp/v2/categories?acf_format=standard'
+  );
+
+  const { data:projects, error:errProjects, loading:loadingProjects } = useFetch(
+    'https://backend.hectorvaldes.dev/wp/wp-json/wp/v2/portfolio?per_page=100'
+  );
+
+  //Get publish projects
+  useEffect(() => {
+    if(projects && projects.length > 0){
+      const filterProjects = getPublishProjects(projects);
+      setProjectsList(filterProjects);
+    }
+  }, [projects]);
+
+  //check the screen for mobile o desktop
+  useEffect(() => {
+    const handleResize = () => {
+        setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Ejecutar en el montaje
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []);
+  
+  //Get only the name of categories with post
+  useEffect(() => {
+    if (categories && categories.length > 0) {
+      const filterIds = getFilteredCategoryIds(categories);
+      setCategoryIds(filterIds);
+    }
+  }, [categories])
+
+  //function for filter projects
+  const getPublishProjects = (projects) => {
+    return projects.filter((project)=>project.status === "publish")
+  }
+
+  //function for the filter ids
+  const getFilteredCategoryIds = (categories) => {
+    return categories
+      .filter((category) => category.count > 0)
+      .map((category) => ({
+        id: category.id,
+        title: category.name,
+        image: category.acf.icon
+      }))
+  }
 
   return (
     <div id='portafolio' className="py-8 px-[5%]">
       <div className="text-center px-[5%] md:px-[10%] lg:px-[15%] xl:px-[20%]">
-        <Title title={varTitle} />
-        <p>{varSubtitle}</p>
+        <Title title={titulo} />
+        <p>{descripcion}</p>
       </div>
-      <div className='sm:block lg:hidden'>
-        {/* PORTAFOLIO MOBILE */}
-        <div className='w-full py-4'>
-          <div className='w-full flex flex-col md:justify-center'>
-            <h3 className="oswald font-medium text-xl px-4 py-4">WordPress</h3>
-          </div>
-          <div className='w-full flex justify-center'>
-            <PortfolioCarousel projectData={WordPressProjects} />
-          </div>
-        </div>
-        <div className='w-full flex flex-col justify-center py-4'>
-          <div className='w-full flex flex-col md:justify-center'>
-            <h3 className="oswald font-medium text-xl px-4 py-4">Videojuegos Desarrollados</h3>
-          </div>
-          <div className='w-full'>
-            <PortfolioCarousel projectData={gamesProjects} />
-          </div>
-        </div>
-        <div className='w-full flex flex-col justify-center py-4'>
-          <div className='w-full flex flex-col md:justify-center'>
-            <h3 className="oswald font-medium text-xl px-4 py-4">Códigos desarrollados</h3>
-          </div>
-          <div className='w-full'>
-            <PortfolioCarousel projectData={codeProjects} />
-          </div>
-        </div>
-      </div>
-      {/* PORTAFOLIO DESKTOP */}
-      <div className='w-full py-16 md:hidden d-none lg:flex lg:justify-center'>
-        <Tabs value="wordpress" className='w-full'>
-          <TabsHeader className="w-full mb-4">
-            {data.map(({ label, value, icon }) => (
-              <Tab key={value} value={value}>
-                <div className='flex flex-row flex-nowrap items-center gap-2 py-2'>
-                  <img src={icon} alt={label} width={24}/>
-                  {label}
-                </div>
-              </Tab>
-            ))}
-          </TabsHeader>
-          <TabsBody>
-            {data.map(({ value, content }) => (
-              <TabPanel key={value} value={value} className="py-0 grid gap-3 grid-cols-3 2xl:grid-cols-4 2xl:gap-6">
-                {
-                  content.map((values, index) => (
-                    <PortfolioCard key={index} data={values} />
-                  ))
-                }
-              </TabPanel>
-            ))}
-          </TabsBody>
-        </Tabs>
-      </div>
+      {isMobile ? (
+        <ProjectsMobile idData={categoryIds} projectsData={projectsList}/>
+      ): (
+        <ProjectsDesktop idData={categoryIds} projectsData={projectsList}/>
+      )}
     </div>
   )
 }

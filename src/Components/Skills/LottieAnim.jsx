@@ -21,7 +21,7 @@ const LottieAnim = ( {animationData} ) => {
     }, [animationData]);
     
   return (
-    <div ref={containerRef} />
+    <div className="max-w-[100px]" ref={containerRef} />
   )
 }
 
