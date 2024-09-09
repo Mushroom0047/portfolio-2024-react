@@ -11,7 +11,7 @@ const ProjectsDesktop = ({ idData, projectsData, loadingProjects }) => {
                         <Tab key={id} value={title}>
                             <div className="flex flex-row flex-nowrap items-center gap-2 py-2">
                                 <img src={image} alt={title} width={24} />
-                                <Typography variant="lead" className="md:text-sm lg:text-md">{title}</Typography>
+                                <Typography variant="lead" className="md:text-xs lg:text-md">{title}</Typography>
                             </div>
                         </Tab>
                     ))}
