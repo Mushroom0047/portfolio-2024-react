@@ -2,8 +2,16 @@ import Title from '../General/Title';
 import SubTitle from '../General/SubTitle';
 import useFetch from '../Hooks/useFetch';
 import texts from '../../assets/texts.json';
+import { useState } from 'react';
+import { Collapse } from '@material-tailwind/react';
 
 const Experience = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleOpen = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   let exp = [];
   const { data, error } = useFetch(
     'https://backend.hectorvaldes.dev/wp/wp-json/wp/v2/experience?acf_format=standard'
@@ -32,9 +40,16 @@ const Experience = () => {
               <div className='w-1/2'>
                 <h2 className='text-right oswald font-light text-3xl'>{data.acf.position}</h2>
               </div>
-              <div className='w-full py-8'>
+              <button
+              onClick={() => toggleOpen(index)}            
+            >
+              {openIndex === index ? 'Mostrar menos...' : 'Mostrar más...'}
+            </button>
+            <Collapse open={openIndex === index}>
+              <div className="w-full py-8">
                 <p>{data.acf.position_description}</p>
               </div>
+            </Collapse>
             </div>
           ))
         }

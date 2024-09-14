@@ -5,6 +5,11 @@ const Icons = ({ color, size, filled }) => {
   const fill = (filled) ? '/ios-filled/' : '/';
   const iconsList = [
     {
+      src: `https://img.icons8.com${fill}${color}/48/filled-message.png`,
+      alt: 'Envelope icon',
+      url: 'mailto:hectorvaldesm47@gmail.com'
+    },
+    {
       src: `https://img.icons8.com${fill}${color}/48/github.png`,
       alt: 'Github icon',
       url: 'https://github.com/Mushroom0047'
